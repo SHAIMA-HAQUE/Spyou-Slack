@@ -1,0 +1,23 @@
+{
+  "name": "spyou-slack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SHAIMA-HAQUE/Spyou-Slack.git"
+  },
+  "author": "Shaima Haque",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SHAIMA-HAQUE/Spyou-Slack/issues"
+  },
+  "homepage": "https://github.com/SHAIMA-HAQUE/Spyou-Slack#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "slackbots": "^1.2.0"
+  }
+}
