@@ -1,0 +1,24 @@
+{
+  "name": "spyou-slack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SHAIMA-HAQUE/Spyou-Slack.git"
+  },
+  "author": "Shaima Haque",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SHAIMA-HAQUE/Spyou-Slack/issues"
+  },
+  "homepage": "https://github.com/SHAIMA-HAQUE/Spyou-Slack#readme",
+  "dependencies": {
+    "@slack/bolt": "^3.11.0",
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
