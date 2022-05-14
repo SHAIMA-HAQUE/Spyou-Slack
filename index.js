@@ -10,7 +10,7 @@ const app = new App({
   appToken: process.env.APP_TOKEN
 });
 threshold = 0.9;
-model = toxicity.load(threshold);
+let model = toxicity.load(threshold);
 
 app.message("hey", async ({ command, say }) => {
   try {
@@ -29,11 +29,12 @@ app.message('knock knock', async ({ message, say }) => {
   });
 
   
-  console.log(app.client);
-  app.event('message', async ({ event, client, logger }) => {
+  
+  app.event('message', async ({ event, client, logger, say}) => {
     try {
-
+      console.log(event.text);
       // Call chat.postMessage with the built-in client
+      //let predictions = await model.classify(text);
       const result = await client.chat.postMessage({
         channel: event.channel,
         text: `Welcome to the team, <@${event.user}>! 🎉 You can introduce yourself in this channel.`
