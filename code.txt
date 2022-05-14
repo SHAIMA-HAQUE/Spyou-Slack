@@ -72,3 +72,22 @@ findConversation("general");
 //     // await say(`_Who's there?_`);
 //     console.log("here");
 //   });
+
+
+app.event('message', async ({ event, client, logger, say}) => {
+    try {
+      console.log(event.text);
+      // Call chat.postMessage with the built-in client
+      //let predictions = await model.classify(text);
+      const result = await client.chat.postMessage({
+        channel: event.channel,
+        text: `Welcome to the team, <@${event.user}>! 🎉 You can introduce yourself in this channel.`
+      });
+      //logger.info(result);
+    }
+    catch (error) {
+      logger.error(error);
+    }
+  });
+
+  {pred[0].charAt(0).toUpperCase()+pred.slice(1)}

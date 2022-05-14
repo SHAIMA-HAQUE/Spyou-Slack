@@ -19,7 +19,7 @@
   "dependencies": {
     "@slack/bolt": "^3.11.0",
     "@tensorflow-models/toxicity": "^1.2.2",
-    "@tensorflow/tfjs": "^3.16.0",
+    "@tensorflow/tfjs": "^3.17.0",
     "dotenv": "^16.0.0",
     "nodemon": "^2.0.15"
   }
