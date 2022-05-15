@@ -59,9 +59,13 @@ app.message('knock knock', async ({ message, say }) => {
           }else{
             text_display = pred[0].charAt(0).toUpperCase() + pred[0].slice(1);
           }
-            const result = client.chat.postMessage({
+            client.chat.postMessage({
               channel: event.channel,
               text: `${text_display} was detected in message sent by <@${event.user}>! Please adhere to community guidelines`
+            });
+            client.chat.delete({
+              channel: event.channel,
+              ts: event.ts
             });
           });
         }); 
