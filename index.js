@@ -70,37 +70,6 @@ app.message('knock knock', async ({ message, say }) => {
     }
   });
   
-  // app.event('message', async ({ event, client, logger, say}) => {
-  //   var pred;
-  //   try {
-  //     let txt = event.text;
-  //     console.log(txt);
-  //     await toxicity.load(threshold).then(model => {
-  //       console.log("Ready!");
-  //       const sentences = txt;
-  //       model.classify(sentences).then(predictions => {
-  //         console.log(predictions.label);
-  //         if(predictions.result[0].match){
-  //           pred = predictions.label;
-  //         }
-  //       });
-  //     });
-  //     // Call chat.postMessage with the built-in client
-  //     console.log(pred);
-  //     // let predictions = await model.classify(txt);
-  //     // console.log(predictions);
-  //     const result = await client.chat.postMessage({
-  //       channel: event.channel,
-  //       text: `${pred.charAt(0).toUpperCase()+pred.slice(1)}was detected in message sent by <@${event.user}>! Please adhere to community guidelines`
-  //     });
-  //     //logger.info(result);
-  //   }
-  //   catch (error) {
-  //     logger.error(error);
-  //   }
-  // });
- 
- 
   (async () => {
     const port = 3000
     // Start your app
