@@ -8,7 +8,8 @@ const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
   signingSecret: process.env.SLACK_SIGNING_SECRET,
   socketMode:true,
-  appToken: process.env.APP_TOKEN
+  appToken: process.env.APP_TOKEN,
+  userToken: process.env.USER_TOKEN
 });
 threshold = 0.9;
 let model;
@@ -64,8 +65,10 @@ app.message('knock knock', async ({ message, say }) => {
               text: `${text_display} was detected in message sent by <@${event.user}>! Please adhere to community guidelines`
             });
             client.chat.delete({
+              token: process.env.USER_TOKEN,
               channel: event.channel,
-              ts: event.ts
+              ts: event.ts,
+              as_user: true
             });
           });
         }); 
