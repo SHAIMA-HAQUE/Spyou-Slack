@@ -12,7 +12,7 @@ const app = new App({
   userToken: process.env.USER_TOKEN
 });
 threshold = 0.9;
-let model;
+
   app.event('message', async ({ event, client, logger, say}) => {
     var pred = [];
     try {
