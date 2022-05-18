@@ -19,9 +19,9 @@ threshold = 0.9;
       const txt = event.text;
       toxicity.load(threshold).then(model=>{
         model.classify(txt).then(predictions => {
-          console.log(predictions.label);
           predictions.forEach(prediction=>{
             if(prediction.results[0].match){
+              console.log(prediction.label);
               pred.push(prediction.label);
             }
             });
