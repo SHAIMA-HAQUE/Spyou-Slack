@@ -14,31 +14,7 @@ const app = new App({
 threshold = 0.9;
 let model;
 
-app.message("hey", async ({ command, say }) => {
-  try {
-    say("Yaaay! that command works!");
-    // console.log(app.client.conversations.info.channel);
-  } catch (error) {
-      console.log("err")
-    console.error(error);
-  }
-});
 
-// All the room in the world for your code
-app.message('knock knock', async ({ message, say }) => {
-    await say(`_Who's there?_`);
-    console.log("here");
-  });
-
-  // app.event('hello', async () =>{
-  //   try{
-  //     model = await toxicity.load(threshold);
-	//     console.log('Ready!');
-  //   }
-  //   catch(error){
-  //     console.log(error);
-  //   }
-  // });
   app.event('message', async ({ event, client, logger, say}) => {
     var pred = [];
     try {
