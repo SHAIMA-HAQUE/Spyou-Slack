@@ -26,14 +26,15 @@ let model;
             }
             });
             var text_display = "";
-            if(pred.length > 1){
+            if(pred.length != 1 && pred.length >0){
             for(let i=0; i<pred.length-1;i++){
                 text_display += pred[i].charAt(0).toUpperCase() + pred[i].slice(1) + " and ";
             }
             text_display += pred[pred.length-1].charAt(0).toUpperCase() + pred[pred.length-1].slice(1);
-          }else{
+          }else if(pred.length == 1){
             text_display = pred[0].charAt(0).toUpperCase() + pred[0].slice(1);
           }
+          if(pred.length != 0){
             client.chat.postMessage({
               channel: event.channel,
               text: `${text_display} was detected in message sent by <@${event.user}>! Please adhere to community guidelines`
@@ -44,6 +45,7 @@ let model;
               ts: event.ts,
               as_user: true
             });
+          }
           });
         }); 
       }catch (error) {
