@@ -13,8 +13,6 @@ const app = new App({
 });
 threshold = 0.9;
 let model;
-
-
   app.event('message', async ({ event, client, logger, say}) => {
     var pred = [];
     try {
